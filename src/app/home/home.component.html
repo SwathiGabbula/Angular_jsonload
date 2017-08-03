@@ -1,0 +1,45 @@
+﻿
+<div class="container ">
+	     <h2> {{rowList?.title}}</h2>
+		<p>{{rowList?.description}}</p>
+		 <ul class="nav navbar-nav" >
+         
+			<li *ngFor="let item of rowList?.rows" >
+			<a href="#">{{item.category}}</a></li>
+        </ul>
+</div>
+
+<div class="category-layout">
+    <div class="row">
+        <div class="col-md-6 col-ld-6">
+            <button (click)="onSelectCompany()"  class="btn btn-primary categories">Companies</button>
+        </div>
+    </div>
+    <div *ngIf="isCompany">
+       <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Url</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let json of companyList" >
+        <td>{{json.title}}</td>
+        <td ><img class='imageClass' src={{json.image}}/></td>
+        <td>{{json.url}}</td>
+        <td>{{json.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  
+</div>
+
+
+
+       
+
+

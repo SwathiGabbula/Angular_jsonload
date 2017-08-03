@@ -1,0 +1,15 @@
+.imageClass{
+    height: 60px !important;
+    width: 150px !important;
+}
+
+.categories{
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+.pdfButton{
+    margin-left:100px
+}
